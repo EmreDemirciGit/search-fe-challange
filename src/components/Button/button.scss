@@ -1,0 +1,20 @@
+@import "/src/theme.scss";
+
+.styled-button {
+  width: 138px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-weight: 700;
+  font-size: 18px;
+  text-shadow: 0px 4px 4px $black-50;
+  background: $primary;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary;
+  }
+}
