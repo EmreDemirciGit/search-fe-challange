@@ -1,0 +1,53 @@
+@import "/src/theme.scss";
+
+.landing-container {
+  display: flex;
+  margin: 20vh auto 0 auto;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    &__logo {
+      width: 278px;
+      height: 115px;
+    }
+
+    &__subtitle {
+      margin: 10px 0 44px 30%;
+    }
+  }
+
+  .search-container {
+    &__search-box {
+      display: flex;
+
+      input {
+        width: 709px;
+        margin-right: 16px;
+      }
+    }
+
+    &__search-preview {
+      padding: 15px 30px;
+      list-style: none;
+      border: 1px solid $gray-250;
+      border-radius: 4px;
+      width: 709px;
+    }
+
+    &__show-more {
+      text-align: center;
+      margin-top: 10px;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}
