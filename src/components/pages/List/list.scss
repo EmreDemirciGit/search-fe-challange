@@ -1,0 +1,74 @@
+@import "/src/theme.scss";
+
+.list {
+  &__header {
+    display: flex;
+    gap: 30px;
+    padding: 27px 37px;
+
+    &__logo {
+      width: 149px;
+      height: 63px;
+    }
+
+    input {
+      width: 509px;
+      margin-top: 5px;
+    }
+  }
+
+  &__employee-container {
+    list-style: none;
+    width: 650px;
+    margin-left: 217px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+
+    &__sort-container {
+      text-align: right;
+    }
+
+    &__list {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+
+  &__pagination {
+    $pagination: &;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    gap: 10px;
+    align-self: center;
+
+    li {
+      &.selected {
+        #{$pagination}__page {
+          background: $primary;
+          color: $white;
+        }
+      }
+
+      #{$pagination}__page {
+        cursor: pointer;
+        user-select: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: $gray-250;
+        padding: 4px 8px;
+        border: 1px solid $gray-250;
+        border-radius: 4px;
+      }
+    }
+
+    &__break {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      user-select: none;
+      cursor: default;
+    }
+  }
+}
