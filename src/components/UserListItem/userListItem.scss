@@ -1,0 +1,62 @@
+@import "/src/theme.scss";
+
+.user-list-item {
+  $this: &;
+  cursor: pointer;
+  border-radius: 4px;
+  padding-bottom: 12px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $gray-350;
+
+    #{$this}__left {
+      &__name {
+        color: $white;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 68px;
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 45%;
+    margin-left: 5px;
+
+    &__location {
+      color: $gray-250;
+      font-weight: 700;
+      size: 18px;
+    }
+
+    &__name {
+      color: $gray-50;
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    color: $gray-250;
+    font-weight: 700;
+    size: 18px;
+  }
+
+  &__line {
+    border: 0;
+    height: 0;
+    border-top: 1px solid $gray-300;
+  }
+}
