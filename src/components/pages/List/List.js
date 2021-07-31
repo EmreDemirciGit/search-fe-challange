@@ -35,7 +35,7 @@ const List = ({ employees, searchString, setSearchString, sortEmployees }) => {
         />
         <Button className="list__header__search-button">Search</Button>
       </div>
-      {employees.length > 1 && (
+      {employees.length > 0 && (
         <div className="list__employee-container">
           <div className="list__employee-container__sort-container">
             <Sort sortEmployees={sortEmployees} />
