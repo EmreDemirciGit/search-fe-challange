@@ -1,0 +1,46 @@
+@import "/src/theme.scss";
+
+.sort {
+  position: relative;
+
+  &__title {
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__options {
+    position: absolute;
+    display: block;
+    top: 25px;
+    right: -120px;
+    padding: 8px 20px 10px 15px;
+    border: 1px solid $gray-250;
+    border-radius: 4px;
+    background: $white;
+    text-align: left;
+
+    &.hidden {
+      display: none;
+    }
+
+    &__option {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 30px;
+      padding: 0 9px;
+      height: 30px;
+      border-radius: 4px;
+      user-select: none;
+      cursor: pointer;
+      margin: 3px 0;
+
+      &:hover,
+      &.active {
+        background: $gray-350;
+        color: $white;
+      }
+    }
+  }
+}
